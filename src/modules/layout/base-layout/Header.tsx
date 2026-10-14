@@ -1,4 +1,3 @@
-import React from "react";
 import CitySearchSelect from "../../pages/weatherPage/CitySearchSelect";
 import type { HeaderProps } from "../../types/WeatherTypes";
 
