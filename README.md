@@ -1,75 +1,74 @@
-# React + TypeScript + Vite
+# Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A weather dashboard built with React and TypeScript that allows users to search for cities and view current weather information.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Search for cities by name
+- Display the selected city's name and country
+- Show current temperature and feels-like temperature
+- Display weather conditions, descriptions, and icons
+- Show daily high and low temperatures
+- Display sunrise and sunset times
+- Show additional weather details, including humidity, pressure, wind speed, wind direction, cloud cover, and visibility
+- Display a 7-day weather forecast
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- OpenWeather API
+- CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js
+- npm
+- An OpenWeather API key
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone this repository:
 
-```
+   git clone YOUR_GITHUB_REPOSITORY_URL
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+2. Navigate to the project directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   cd weather-forecast
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. Install dependencies:
 
-```
+   pnpm add
+
+4. Create a `.env` file in the project root and add your API key:
+
+   ```env
+   VITE_OPENWEATHER_API_KEY=your_api_key_here
+   ```
+
+5. Start the development server:
+
+   pnpm run dev
+
+6. Open the local URL shown in your terminal.
+
+## Environment Variables
+
+The application uses an OpenWeather API key to retrieve weather data.
+
+| Variable | Description |
+|---|---|
+| `VITE_OPENWEATHER_API_KEY` | OpenWeather API key |
+
+## Future Improvements
+
+- Improve responsive design for mobile devices
+- Add more weather-related visualizations
+- Improve loading and error states
+
+## Author
+
+Puja
